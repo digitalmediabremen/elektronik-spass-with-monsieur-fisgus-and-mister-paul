@@ -1,5 +1,7 @@
 # Elektronik-Spass with Monsieur Fisgus and Mister Paul
 
+## Setup
+
 1. install "esp32 by Espressif Systems" (v2.0.17) via `Tools > Board: "…" > Board Manager…` ( note, that this is NOT the most recent version )
 2. select board at `Tools > Board > ESP32 Arduino > ESP32 Dev Module`
 3. select serial port at `Tools > Port: "…"` e.g `cu.usbserial-0001`
