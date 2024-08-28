@@ -13,4 +13,4 @@
 
 ![](ESP32-audio-kit.webp)
 
-ESP-32 Audio Kit 2.2 with ESP32-A1S MCU incl. ES8388 Audio Codec
+*ESP-32 Audio Kit 2.2 with ESP32-A1S MCU incl. ES8388 Audio Codec*
