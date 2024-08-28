@@ -1,6 +1,6 @@
 # Elektronik-Spass with Monsieur Fisgus and Mister Paul
 
-1. install "esp32 by Espressif Systems" (v2.0.17) via *Tools > Board: "…" > Board Manager…* ( `CMD+SHIFT+B` ) ( note, that this is NOT the most recent version )
+1. install "esp32 by Espressif Systems" (v2.0.17) via `Tools > Board: "…" > Board Manager…` ( note, that this is NOT the most recent version )
 2. select board at `Tools > Board > ESP32 Arduino > ESP32 Dev Module`
 3. select serial port e.g `cu.usbserial-0001`
 4. run example `File > Examples > 01.Basics > Blink` ( define `LED_BUILTIN` as pin `22` with `#define LED_BUILTIN 22` )
