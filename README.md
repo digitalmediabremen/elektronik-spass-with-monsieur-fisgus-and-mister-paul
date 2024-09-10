@@ -16,3 +16,12 @@
 ![](ESP32-audio-kit.webp)
 
 *ESP-32 Audio Kit 2.2 with ESP32-A1S MCU incl. ES8388 Audio Codec*
+
+
+## basic operations input output
+- potentiometer / fader
+- buttons / switches
+- LED
+- neopixel / adressable RGB LED
+- servo motor
+- serial sensor I2C/ SPI 
