@@ -19,7 +19,7 @@
 
 *ESP-32 Audio Kit 2.2 with ESP32-A1S MCU incl. ES8388 Audio Codec*
 
-## pinmap
+## ESP-32 Audio Kit pinmap
 
 | IO | USEABLE?                    | ADC | SPI/ I2C / UART | CAP. TOUCH | AUDIOKIT  | AUDIOKIT ALT. | 
 | -- | --------------------------- | --- | --------------- | ---------- | --------- | ------------- |
@@ -45,8 +45,8 @@
 | 25 |                             |  x  |                 |            | I2S WS    |               |
 | 26 |                             |  x  |                 |            | I2S DO    |               |
 | 27 |                             |  x  |                 |      x     | I2S BCK   |               |
-| 32 |                             |  x  |                 |      x     | I2C SCL?  |               |
-| 33 |                             |  x  |                 |      x     | I2C SDA?  |               |
+| 32 |                             |  x  |                 |      x     |           |               |
+| 33 |                             |  x  |                 |      x     |           |               |
 | 34 | input only                  |  x  |                 |            |           | SD DETECT     |
 | 35 | input only                  |  x  |                 |            | I2S DI    |               |
 | 36 | input only                  |  x  |                 |            | KEY 1     | KEY AD        |
@@ -58,5 +58,5 @@
 - potentiometer / fader
 - neopixel / adressable RGB LED 
 - servo motor
-- serial sensor I2C/ SPI 
+- serial sensor I2C / SPI 
 - capacitive touch 
