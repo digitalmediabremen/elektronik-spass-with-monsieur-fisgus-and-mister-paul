@@ -7,11 +7,13 @@
 3. select serial port at `Tools > Port: "…"` e.g `cu.usbserial-0001`
 4. run example `File > Examples > 01.Basics > Blink` ( define `LED_BUILTIN` as pin `22` with `#define LED_BUILTIN 22` )
 5. install libraries:
-    - [Arduino Audio Tools](https://github.com/pschatzmann/arduino-audio-tools) (v0.9.8)
-    - [Arduino Audio Driver](https://github.com/pschatzmann/arduino-audio-driver) (v0.1.0)
-    - [Mozzi](https://github.com/sensorium/Mozzi) (v2.0.1)
-    - [Bounce2](https://github.com/thomasfredericks/Bounce2) (v2.71)
-    - [FastLED](https://github.com/FastLED/FastLED)(v3.7.6)
+    1. manually via
+        - [Arduino Audio Tools](https://github.com/pschatzmann/arduino-audio-tools) (v0.9.8) 
+        - [Arduino Audio Driver](https://github.com/pschatzmann/arduino-audio-driver) (v0.1.0)
+    2. via Arduino IDE i.e `Sketch > Include Library > Manage Libraries…`     
+        - [Mozzi](https://github.com/sensorium/Mozzi) (v2.0.1)
+        - [Bounce2](https://github.com/thomasfredericks/Bounce2) (v2.71)
+        - [FastLED](https://github.com/FastLED/FastLED)(v3.7.6)
 6. run example `File > Examples > audio-tools > examples-dsp > examples-mozzi > control_gain`
 7. see [ESP32-Audio-kit Documentation](https://docs.ai-thinker.com/en/esp32-audio-kit) for more details
 
