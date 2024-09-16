@@ -25,16 +25,16 @@
 
 | IO | USEABLE?                    | ADC | SPI/ I2C / UART | AUDIOKIT  | AUDIOKIT ALT. | 
 | -- | --------------------------- | --- | --------------- | --------- | ------------- |
-| 0  | low for flash mode          |  x  |                 |           | IO 0          |
+| 0  | low for flash mode          |maybe|                 |           | IO 0          |
 | 1  | FTDI TX                     |     | UART0 TX        | TX        |               |
-| 2  | low or float for flash mode |  x  |                 |           | SD DATA 0     |               
+| 2  | low or float for flash mode |     |                 |           | SD DATA 0     |               
 | 3  | FTDI RX                     |     | UART0 RX        | RX        |               |               
-| 4  |                             |  x  | VSPI CS         |           | SD DATA 1     |               
+| 4  |                             |     | VSPI CS         |           | SD DATA 1     |               
 | 5  | outputs PWM at boot         |     |                 | KEY 6     | IO 5          |               
-| 12 | boot fail when high         |  x  | HSPI DI         |           | SD DATA 2     |               
-| 13 |                             |  x  | HSPI DO         | KEY 2     | SD DATA 3     |               
-| 14 |                             |  x  | HSPI CLK        |           | SD CLK        |               
-| 15 |                             |  x  | HSPI CS         |           | SD CMD        |               
+| 12 | boot fail when high         |  y  | HSPI DI         | MTDI      | SD DATA 2     |               
+| 13 |                             |     | HSPI DO         | KEY 2     | SD DATA 3     |               
+| 14 |                             |  y  | HSPI CLK        | MTMS      | SD CLK        |               
+| 15 |                             |     | HSPI CS         |           | SD CMD        |               
 | 16 |                             |     | UART2 RX        | n.a.      |               |               
 | 17 |                             |     | UART2 TX        | n.a.      |               |               
 | 18 |                             |     | VSPI CLK        | KEY 5     | IO 18         |               
@@ -44,15 +44,15 @@
 | 22 |                             |     | I2C SCL         |           | IO 22 /LED D4 |
 | 23 |                             |     | VSPI DI         | KEY 4     | IO 23         |
 | 24 |                             |     |                 | n.a.      |               |
-| 25 |                             |  x  |                 | I2S WS    |               |
-| 26 |                             |  x  |                 | I2S DO    |               |
-| 27 |                             |  x  |                 | I2S BCK   |               |
-| 32 |                             |  x  |                 |           |               |
-| 33 |                             |  x  |                 |           |               |
-| 34 | input only                  |  x  |                 |           | SD DETECT     |
-| 35 | input only                  |  x  |                 | I2S DI    |               |
-| 36 | input only                  |  x  |                 | KEY 1     | KEY AD        |
-| 39 | input only                  |  x  |                 | HP DETECT |               |
+| 25 |                             |     |                 | I2S WS    |               |
+| 26 |                             |     |                 | I2S DO    |               |
+| 27 |                             |     |                 | I2S BCK   |               |
+| 32 |                             |     |                 |           |               |
+| 33 |                             |     |                 |           |               |
+| 34 | input only                  |     |                 |           | SD DETECT     |
+| 35 | input only                  |     |                 | I2S DI    |               |
+| 36 | input only                  |     |                 | KEY 1     | KEY AD        |
+| 39 | input only                  |     |                 | HP DETECT |               |
 
 ## basic operations input output
 - LED
