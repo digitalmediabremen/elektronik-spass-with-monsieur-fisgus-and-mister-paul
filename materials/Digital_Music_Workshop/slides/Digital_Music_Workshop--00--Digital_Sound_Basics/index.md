@@ -191,7 +191,8 @@ the most common envelope is the *Attack-Decay-Sustain-Release envelope* (Â ADSRÂ
 
 - Peak Follower
 - Beat Detection
-- Fast Fourier Transformation (FFT) ( for an explanation on FFT see [3Blue1Brown: But what is the Fourier Transform? A visual introduction.](https://youtu.be/spUNpyF58BY) )
+- Fast Fourier Transformation (FFT) ( for an impressively comprehensible explanation on fourier transformations see [3Blue1Brown: But what is the Fourier Transform? A visual introduction.](https://youtu.be/spUNpyF58BY) )
+- @example(`ExampleDSPAnalysis00FFT`) + @example(`ExampleDSPAnalysis01SonogramFrequencyDistribution`)
 
 ---
 
@@ -244,17 +245,17 @@ an incomplete list of some common audio applications:
 
 ---
 
-### \---
-### Ton
-### \---
+### \------
+### Wellen
+### \------
 
-[Ton](https://github.com/dennisppaul/ton) a framework for exploring and teaching generative music making and algorithmic compositions. it facilitates simple ways of playing musical notes, facilitates easy access to low-level digital signal processing (DSP) and supplies rhythm and timing as well as some standard muscial mechanics. the library acts as a simple adapter to various sound in- and outputs like JSyn, MIDI, OSC, or analog audio.
+[Wellen](https://github.com/dennisppaul/wellen) is a framework for exploring and teaching generative music making and algorithmic compositions. it facilitates simple ways of playing musical notes, facilitates easy access to low-level digital signal processing (DSP) and supplies rhythm and timing as well as some standard muscial mechanics. the library acts as an adapter to various sound in- + outputs like MIDI, OSC, or digital/analog audio. the library is hosted on github wellen.
 
 ---
 
-### \---
-### Ton
-### \---
+### \------
+### Wellen
+### \------
 
 - `Ton` playing notes
 - `DSP` processing sound

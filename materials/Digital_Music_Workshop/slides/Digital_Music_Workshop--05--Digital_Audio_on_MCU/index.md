@@ -2,24 +2,24 @@
 size: 4:3
 ---
 
-# \==================================================
+# \--------------------------------------------------
 # Digital Music Workshop / 05 / Digital Audio on MCU
-# \==================================================
+# \--------------------------------------------------
 
 ---
 
-# \==================================================
+# \--------------------------------------------------
 # Digital Music Workshop / 05 / Digital Audio on MCU
-# \==================================================
+# \--------------------------------------------------
 
 - small computation
 - platforms + setups
 
 ---
 
-## \=================
+## \-----------------
 ## small computation
-## \=================
+## \-----------------
 
 - Why make musik on a *Microcontroller Unit* (MCU)?
 - if you don t feel it, don t do it. it s a lot of ( extra ) work. ( e.g Automatique Orchestra )
@@ -48,9 +48,9 @@ size: 4:3
 
 ---
 
-## \==================
+## \------------------
 ## platforms + setups
-## \==================
+## \------------------
 
 from *bare-metal* to *low-level* hardware. a series of typical platforms + setups:
 
