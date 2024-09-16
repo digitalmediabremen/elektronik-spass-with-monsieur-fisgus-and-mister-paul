@@ -6,8 +6,8 @@
 2. select board at `Tools > Board > esp32 > ESP32 Dev Module`
 3. select serial port at `Tools > Port: "…"` e.g `cu.usbserial-0001`
 4. run example `File > Examples > 01.Basics > Blink` ( define `LED_BUILTIN` as pin `22` with `#define LED_BUILTIN 22` )
-5. install libraries:
-    1. manually via
+5. install libraries ( make sure to install the exact same version as specified ):
+    1. manually by downloading the ZIP from:
         - [Arduino Audio Tools](https://github.com/pschatzmann/arduino-audio-tools) (v0.9.8) 
         - [Arduino Audio Driver](https://github.com/pschatzmann/arduino-audio-driver) (v0.1.0)
     2. via Arduino IDE i.e `Sketch > Include Library > Manage Libraries…`     
