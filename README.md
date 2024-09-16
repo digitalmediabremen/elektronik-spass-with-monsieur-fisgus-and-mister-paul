@@ -61,4 +61,3 @@
 - neopixel / adressable RGB LED 
 - servo motor
 - serial sensor I2C / SPI 
-- capacitive touch 
