@@ -15,7 +15,7 @@
 6. run example `File > Examples > audio-tools > examples-dsp > examples-mozzi > control_gain`
 7. see [ESP32-Audio-kit Documentation](https://docs.ai-thinker.com/en/esp32-audio-kit) for more details
 
-![](ESP32-audio-kit.webp)
+![](./assets/ESP32-audio-kit.webp)
 
 *ESP-32 Audio Kit 2.2 with ESP32-A1S MCU incl. ES8388 Audio Codec*
 
