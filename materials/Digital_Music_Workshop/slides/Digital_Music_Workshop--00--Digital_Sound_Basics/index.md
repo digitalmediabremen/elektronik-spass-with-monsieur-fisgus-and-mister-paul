@@ -322,3 +322,26 @@ an incomplete list of some common audio applications:
 - `DSP` processing sound
 - `Beat` creating rhythm
  
+---
+
+### \------
+### Keywords
+### \------
+
+- Period :: one full cycle of an oscillation e.g of a sine wave
+- Amplitude :: the height of an oscillation
+- Hertz (Hz) :: 1Hz translates to "once per second". e.g a sinewave that oscillates at 100Hz repeats the *period* ( i.e one full cycle ) 100 times per second. in audio context 
+- Sample :: a single sample is just a singe number usually within a specific range. in audio context it is common to have a value range from `-1.0` to `1.0` for `float` or `-32768` to `32767` for a signed, 16bit integer i.e `int16_t`
+- Sampling Rate ( or Sample Rate ) :: number of samples per second e.g a sampling rate of 48KHz means 48000 samples per second.
+
+---
+
+### \------
+### Keywords
+### \------
+
+- Bit Depth :: resolution or value range of a sample. common sample rates are 8bit ( e.g with Mozzi on Arduino Uno ), 16bit ( e.g CD quality ), 24bit ( e.g default with most audio hardware ) and 32bit.
+- Digital-Analog Converters (DAC) :: convert samples into analog audio signals ( i.e voltages )
+- Analog-Digital Converters (ADC) :: convert analog audio signals into samples
+- Audio Codec :: an IC combining DACs + ADCs. Audio Codecs often interfaced via I2S ( Inter-Integrated Circuit Sound ) for audio signal transmission and controlled via I2C
+
