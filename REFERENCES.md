@@ -5,6 +5,8 @@
 
 </br>
 
-#Links
+# Links
 
 - [mozzi code reference](https://sensorium.github.io/Mozzi/doc/html/index.html)
+- [bytebeat in the browser](http://wurstcaptures.untergrund.net/music/)
+- [Niklas' binary beat](https://www.niklasroy.com/project/39/psp-pocket-sound-performer)
