@@ -123,4 +123,4 @@ from *bare-metal* to *low-level* hardware. a series of typical platforms + setup
 - usually has built-in amplifier for headphones or line-out and sometimes has built-in amplifier for microphone + line-in
 - e.g [Teensy 3.2](https://www.pjrc.com/store/teensy32.html) + [Audio Adaptor Board](https://www.pjrc.com/store/teensy3_audio.html) + [Audio Library](https://www.pjrc.com/teensy/td_libs_Audio.html)
 - e.g [DAISY SEED](https://www.electro-smith.com/daisy/daisy)
-- e.g @(TBR) e.g Klangstrom ( STM32 + WM8731 ) 
+- e.g @(TBR) e.g Klangstrom ( STM32 + WM8731 )

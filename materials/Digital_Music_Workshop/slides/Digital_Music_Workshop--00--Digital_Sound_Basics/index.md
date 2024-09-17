@@ -71,6 +71,14 @@ HEX dump of WAV file 16 bits ( = 2 bytes ) per sample
 
 ---
 
+## \-------
+## samples
+## \-------
+
+@mozzi(out of *historical reasons* mozzi mostly uses 8bit sample resolution)
+
+---
+
 ## \----------------------------
 ## audio processing + synthesis
 ## \----------------------------
@@ -114,6 +122,22 @@ the most common waveforms or -shapes are:
 
 ---
 
+### \----------
+### oscillator
+### \----------
+
+@mozzi( 
+a sinewave oscillator with 2048 samples may look like this:
+```cpp
+#include <Oscil.h>
+#include <tables/sin2048_int8.h>
+Oscil <SIN2048_NUM_CELLS, MOZZI_AUDIO_RATE> aSin(SIN2048_DATA);
+```
+samples are continously generated with `aSin.next()`
+)
+
+---
+
 ### \-------
 ### filters
 ### \-------
@@ -146,6 +170,21 @@ the most common filters are:
 
 ![bg fit vertical](./resources/LFP-square-wave.png)
 ![bg fit](./resources/LFP-square-wave-resonance.png)
+
+---
+
+### \-------
+### filters
+### \-------
+
+@mozzi(
+a low-pass filter may look like this:
+```cpp
+#include <StateVariable.h>
+StateVariable <LOWPASS> svf;
+```
+e.g cut-off frequency is set with `svf.setCentreFreq(1200)` samples are continously filtered with `svf.next(mSample)`
+)
 
 ---
 
@@ -185,6 +224,21 @@ the most common envelope is the *Attack-Decay-Sustain-Release envelope* (Â ADSRÂ
 
 ---
 
+### \-------
+### effects
+### \-------
+
+@mozzi(
+a delay with a buffer with a maximum of 256 samples may look like this:
+```cpp
+#include <AudioDelay.h>
+AudioDelay <256> aDel;
+```
+samples are continously generated with `aDel.next(mSample, mBufferLength)`
+)
+
+---
+
 ### \--------
 ### analysis
 ### \--------
@@ -216,10 +270,17 @@ the most common envelope is the *Attack-Decay-Sustain-Release envelope* (Â ADSRÂ
 - visual
     - Max
     - Pure Data
-- text-based
+- text-based ( on desktop )
     - SuperCollider
     - Csound
-    - Processing.org ( Libraries )
+    - Processing.org ( via Libraries )
+        - [Sound](https://processing.org/reference/libraries/sound)
+        - [Minim](https://github.com/ddf/Minim)
+        - [Wellen](https://github.com/dennisppaul/wellen)
+- text-based ( on microcontrollers (MCU) )
+        - [DaisySP](https://github.com/electro-smith/DaisySP)
+        - [Mozzi](https://sensorium.github.io/Mozzi/)
+        - [KlangWellen](https://github.com/dennisppaul/klangwellen)
 
 <!-- @todo(add screenshots from applications e.g MAX + Csound) -->
 
