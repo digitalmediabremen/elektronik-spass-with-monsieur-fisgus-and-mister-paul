@@ -116,7 +116,7 @@ the most common waveforms or -shapes are:
 
 - in reference to their electronic origins oscillators are sometimes still refered to as *Voltage-Controlled Oscillators* (VCO).
 - oscillators that oscillate at low frequencies ( < 20Hz ) are refered to as *Low Frequency Oscillators* (LFO).
-- *wavetables* are pieces of memory containing waveforms ( or other sample data ). in audioprogramming wavetables are sometimes used to implement oscillators.
+- *wavetables* are pieces of memory containing waveforms ( or other sample data ). in audio-programming wavetables are sometimes used to implement oscillators.
 - *oscilloscopes* are used to visualize signals.
 - @example(`ExampleDSP05Wavetable`)
 
@@ -321,7 +321,7 @@ an incomplete list of some common audio applications:
 - `Ton` playing notes
 - `DSP` processing sound
 - `Beat` creating rhythm
- 
+
 ---
 
 ### \------
@@ -330,9 +330,19 @@ an incomplete list of some common audio applications:
 
 - Period :: one full cycle of an oscillation e.g of a sine wave
 - Amplitude :: the height of an oscillation
-- Hertz (Hz) :: 1Hz translates to "once per second". e.g a sinewave that oscillates at 100Hz repeats the *period* ( i.e one full cycle ) 100 times per second. in audio context 
+- Hertz (Hz) :: 1Hz translates to "once per second". e.g a sinewave that oscillates at 100Hz repeats the *period* ( i.e one full cycle ) 100 times per second. humans can usually 
+- Oscillator :: a ( hard- or software ) device that creates an *oscillating* signal
+- Low-Frequency Oscillator :: an oscillator that moves at a low frequency often used to control parameters like volume, frequency etcetera
+
+---
+
+### \------
+### Keywords
+### \------
+
 - Sample :: a single sample is just a singe number usually within a specific range. in audio context it is common to have a value range from `-1.0` to `1.0` for `float` or `-32768` to `32767` for a signed, 16bit integer i.e `int16_t`
 - Sampling Rate ( or Sample Rate ) :: number of samples per second e.g a sampling rate of 48KHz means 48000 samples per second.
+- Wavetable :: a section of memory containing sample data often in wave form. in audio-programming wavetables are sometimes used to implement oscillators.
 
 ---
 
@@ -344,4 +354,3 @@ an incomplete list of some common audio applications:
 - Digital-Analog Converters (DAC) :: convert samples into analog audio signals ( i.e voltages )
 - Analog-Digital Converters (ADC) :: convert analog audio signals into samples
 - Audio Codec :: an IC combining DACs + ADCs. Audio Codecs often interfaced via I2S ( Inter-Integrated Circuit Sound ) for audio signal transmission and controlled via I2C
-
