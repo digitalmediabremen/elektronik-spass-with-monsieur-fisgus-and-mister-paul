@@ -1,6 +1,5 @@
 #include <Arduino.h>
 #define DECODE_DISTANCE_WIDTH
-#include "PinDefinitionsAndMore.h"
 #include <IRremote.hpp>
 
 #include "AudioTools.h"
@@ -15,7 +14,7 @@ AudioBoardStream i2s(AudioKitEs8388V1);  // audio sink
 MozziStream mozzi;                       // audio source
 StreamCopy copier(i2s, mozzi);           // copy source to sink
 Oscil<SIN2048_NUM_CELLS, sample_rate> aSin(SIN2048_DATA);
-byte gain = 255;
+byte gain = 0;
 
 uint32_t control_frame_counter = 0;
 bool led1_state = false;
@@ -36,6 +35,8 @@ constexpr uint16_t BOB_LEVER_UP_B = 0x7689;
 constexpr uint16_t BOB_LEVER_NEUTRAL_B = 0x7A85;
 constexpr uint16_t BOB_LEVER_DOWN_B = 0x6E91;
 
+constexpr uint8_t IR_RECEIVE_PIN = 5;
+
 struct LED_info {
   bool state;
   int pin;
@@ -52,7 +53,6 @@ void setup_audio_codec() {
   cfg.copyFrom(info);
   mozzi.begin(cfg);
 
-  // setup output
   auto out_cfg = i2s.defaultConfig();
   out_cfg.copyFrom(info);
   i2s.begin(out_cfg);
@@ -75,7 +75,7 @@ void setup() {
   setup_audio_codec();
   setup_leds();
 
-  aSin.setFreq(3320);  // set the frequency
+  aSin.setFreq(3320);
 }
 
 void loop() {
@@ -85,7 +85,6 @@ void loop() {
     if (IrReceiver.decodedIRData.protocol == UNKNOWN) {
       IrReceiver.resume();
     } else {
-      Serial.println(IrReceiver.decodedIRData.decodedRawData, HEX);
       IrReceiver.resume();
     }
 
@@ -93,9 +92,16 @@ void loop() {
     switch (hexval) {
       case BOB_SPEAKER_A:
         Serial.println("SPEAKER_A");
+        gain = 255;
+        aSin.setFreq(3320);
         break;
       case BOB_SPEAKER_B:
+        gain = 255;
+        aSin.setFreq(3320/3);
         break;
+      default:
+        // print unrecognized value
+        Serial.println(IrReceiver.decodedIRData.decodedRawData, HEX);
     }
   }
 }
@@ -106,13 +112,14 @@ void toggleLED(LED_info& led) {
 }
 
 void updateControl() {
-  gain = gain - 3;
+  if (gain > 4) {
+    gain = gain - 3;
+  }
 
   control_frame_counter++;
   if (control_frame_counter % 16 == 0) {
     toggleLED(led1);
     toggleLED(led2);
-    Serial.println("...");
   }
 }
 
