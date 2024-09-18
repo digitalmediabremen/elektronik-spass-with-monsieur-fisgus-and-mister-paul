@@ -34,7 +34,7 @@
 | 12 | boot fail when high         |  y  | HSPI DI         | MTDI      | SD DATA 2     |               
 | 13 |                             |     | HSPI DO         | KEY 2     | SD DATA 3     |               
 | 14 |                             |  y  | HSPI CLK        | MTMS      | SD CLK        |               
-| 15 |                             |     | HSPI CS         |           | SD CMD        |               
+| 15 |                             |     | HSPI CS         | MTDI      | SD CMD        |               
 | 16 |                             |     | UART2 RX        | n.a.      |               |               
 | 17 |                             |     | UART2 TX        | n.a.      |               |               
 | 18 |                             |     | VSPI CLK        | KEY 5     | IO 18         |               
