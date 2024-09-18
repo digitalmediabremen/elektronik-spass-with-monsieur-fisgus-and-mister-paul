@@ -78,6 +78,23 @@ void setup() {
   aSin.setFreq(3320);
 }
 
+void handle_decoded_IRData(int hexval) {
+  switch (hexval) {
+    case BOB_SPEAKER_A:
+      Serial.println("SPEAKER_A");
+      gain = 255;
+      aSin.setFreq(3320);
+      break;
+    case BOB_SPEAKER_B:
+      gain = 255;
+      aSin.setFreq(3320 / 3);
+      break;
+    default:
+      /* print unrecognized value */
+      Serial.println(IrReceiver.decodedIRData.decodedRawData, HEX);
+  }
+}
+
 void loop() {
   copier.copy();
 
@@ -85,23 +102,8 @@ void loop() {
     if (IrReceiver.decodedIRData.protocol == UNKNOWN) {
       IrReceiver.resume();
     } else {
+      handle_decoded_IRData(IrReceiver.decodedIRData.decodedRawData);
       IrReceiver.resume();
-    }
-
-    int hexval = IrReceiver.decodedIRData.decodedRawData;
-    switch (hexval) {
-      case BOB_SPEAKER_A:
-        Serial.println("SPEAKER_A");
-        gain = 255;
-        aSin.setFreq(3320);
-        break;
-      case BOB_SPEAKER_B:
-        gain = 255;
-        aSin.setFreq(3320/3);
-        break;
-      default:
-        // print unrecognized value
-        Serial.println(IrReceiver.decodedIRData.decodedRawData, HEX);
     }
   }
 }
